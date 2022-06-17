@@ -1,0 +1,46 @@
+{
+  "name": "shopit",
+  "version": "1.0.0",
+  "description": "full ecommerce site using mern",
+  "main": "server.js",
+  "engines": {
+    "node": "14.16.0"
+  },
+  "scripts": {
+    "start": "SET node backend/server.js",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon backend/server",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/server",
+    "seeder": "node backend/utils/seeder.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "author": "Ghulam Abbas",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "cloudinary": "^1.30.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.8",
+    "nexmo": "^2.9.1",
+    "nodemailer": "^6.7.5",
+    "prop-types": "^15.8.1",
+    "qrcode.react": "^2.0.0",
+    "rc-tween-one": "^3.0.6",
+    "react-document-title": "^2.0.3",
+    "react-github-button": "^0.1.11",
+    "react-to-print": "^2.14.7",
+    "socket.io": "^4.5.1",
+    "stripe": "^9.8.0",
+    "twilio": "^3.77.3",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

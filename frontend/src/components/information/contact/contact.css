@@ -1,0 +1,245 @@
+.main-contact {
+  /* margin: 0; */
+  margin-left: 50px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.section .container {
+  position: relative;
+  margin-top: 10px;
+  min-width: 1100px;
+  min-height: 550px;
+  display: flex;
+  z-index: 1000;
+}
+.section .container .contactinfo {
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 60px);
+  background: #0f3959;
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+}
+.section .container .contactinfo h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+.section .container .contactinfo .info {
+  position: relative;
+  margin: 20px 0;
+}
+.section .container .contactinfo .info li {
+  position: relative;
+  list-style: none;
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
+  align-items: flex-start;
+}
+.section .container .contactinfo .info li span:nth-child(1) {
+  width: 30px;
+  min-width: 30px;
+}
+.section .container .contactinfo .info li span:nth-child(1) img {
+  max-width: 100%;
+  filter: invert(1);
+  opacity: 0.5;
+}
+.section .container .contactinfo .info li span:nth-child(2) {
+  color: #fff;
+  margin-left: 10px;
+  font-weight: 300;
+  opacity: 0.5;
+}
+.section .container .contactinfo .info li:hover span:nth-child(1) img,
+.section .container .contactinfo .info li:hover span:nth-child(2) {
+  opacity: 1;
+}
+.section .container .contactinfo .social {
+  position: relative;
+  display: flex;
+}
+.section .container .contactinfo .social li {
+  list-style: none;
+  margin-right: 15px;
+}
+.section .container .contactinfo .social li a {
+  text-decoration: none;
+}
+.section .container .contactinfo .social li a img {
+  filter: invert(1);
+  opacity: 0.5;
+}
+.section .container .contactinfo .social li:hover {
+  opacity: 1;
+}
+
+/* ---------- contactForm ----------------  */
+.section .container .contactForm {
+  position: absolute;
+  padding: 70px 50px;
+  background: #fff;
+  margin-left: 150px;
+  padding-left: 250px;
+  width: calc(100% - 310px);
+  height: 100%;
+  margin-top: 10px;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+}
+.section .container .contactForm h2 {
+  color: #0f3959;
+  font-size: 24px;
+  font-weight: 500;
+}
+.section .container .contactForm .formBox {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+.section .container .contactForm .formBox .inputBox {
+  position: relative;
+  margin: 0 0 35px 0;
+}
+.section .container .contactForm .formBox .inputBox.w50 {
+  width: 47%;
+}
+.section .container .contactForm .formBox .inputBox.w100 {
+  width: 100%;
+}
+.section .container .contactForm .formBox .inputBox input,
+.section .container .contactForm .formBox .inputBox textarea {
+  width: 100% !important;
+  padding: 5px 0;
+  resize: none;
+  font-size: 18px;
+  font-weight: 300;
+  border: none;
+  border-bottom: 1px solid #777;
+  color: #333;
+  outline: none;
+}
+.section .container .contactForm .formBox .inputBox textarea {
+  min-height: 120px;
+}
+.section .container .contactForm .formBox .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  transition: 0.5s all;
+  pointer-events: none;
+}
+.section .container .contactForm .formBox .inputBox input:focus ~ span,
+.section .container .contactForm .formBox .inputBox textarea:focus ~ span,
+.section .container .contactForm .formBox .inputBox input:valid ~ span,
+.section .container .contactForm .formBox .inputBox textarea:valid ~ span {
+  transition: translateY(-20px);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #ff568c;
+}
+.section .container .contactForm .formBox .inputBox input[type="submit"] {
+  position: relative;
+  cursor: pointer;
+  background: #0f3959;
+  color: #fff;
+  border: none;
+  max-width: 150px;
+  padding: 12px;
+}
+.section .container .contactForm .formBox .inputBox input[type="submit"]:hover {
+  background: #ff568c;
+}
+@media only screen and (max-width: 500px) and (min-width: 280px) {
+  .section .container .contactForm {
+    margin-left: -10px;
+
+    padding-left: 30px;
+    width: calc(100% - 710px);
+  }
+  .section .container .contactinfo {
+    display: none;
+  }
+  .section .container {
+    min-width: 1050px;
+  }
+}
+@media only screen and (max-width: 920px) and (min-width: 400px) {
+  .section .container .contactForm {
+    margin-left: 150px;
+    padding-left: 250px;
+    width: calc(100% - 530px);
+  }
+  .section .container .contactinfo {
+    height: calc(100% - 60px);
+  }
+  .section .container {
+    min-width: 1080px;
+  }
+}
+@media only screen and (max-width: 540px) and (min-width: 500px) {
+  .section .container .contactForm {
+    margin-left: 10px;
+    padding-left: 50px;
+    width: calc(100% - 600px);
+  }
+  .section .container .contactinfo {
+    /* height: calc(100% - 60px); */
+    display: none;
+  }
+  .section .container {
+    min-width: 1080px;
+  }
+}
+@media only screen and (max-width: 280px) and (min-width: 100px) {
+  .section .container .contactForm {
+    margin-left: -15px;
+    padding-left: 10px;
+    width: calc(100% - 825px);
+  }
+  .section .container .contactinfo {
+    height: calc(100% - 60px);
+  }
+  .section .container {
+    min-width: 1080px;
+  }
+}
+@media only screen and (max-width: 900px) and (min-width: 359px) {
+  .section .container .contactForm {
+    margin-left: -65px;
+    padding-left: 10px;
+    width: calc(100% - 25px);
+  }
+  .section .container .contactinfo {
+    height: calc(100% - 60px);
+  }
+  .section .container {
+    min-width: 300px;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 767px) {
+  .section .container .contactForm {
+    margin-left: -15px;
+    padding-left: 10px;
+    width: calc(100% - 85px);
+  }
+  .section .container .contactinfo {
+    display: none;
+    height: calc(100% - 60px);
+  }
+  .section .container {
+    min-width: 180px;
+  }
+}
