@@ -1,5 +1,5 @@
 {
-  "name": "shopit",
+  "name": "Medicine Donation Portal",
   "version": "1.0.0",
   "description": "full ecommerce site using mern",
   "main": "server.js",
@@ -14,7 +14,7 @@
     "seeder": "node backend/utils/seeder.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
   },
-  "author": "Ghulam Abbas",
+  "author": "Saif ur Rehman",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
