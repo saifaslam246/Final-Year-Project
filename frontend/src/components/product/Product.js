@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Product = ({ product, col }) => {
-  const allDate = product.date;
-  const expiaryDate = allDate.split("T00:00:00.000Z");
   return (
     <div className={`col-sm-12 col-md-6 col-lg-${col} my-3`}>
       <div className="card p-3 rounded">
@@ -34,7 +32,20 @@ const Product = ({ product, col }) => {
               {product.stock > 0 ? "In Stock" : "Out of Stock"}
             </span>
           </p>
-          <p className="card-text">Expiry Date: {expiaryDate}</p>
+          <p className="card-text">
+            {product.date ? (
+              <span>
+                Expiry Date:
+                {new Date(product.date).getFullYear() +
+                  "-" +
+                  new Date(product.date).getDay() +
+                  "-" +
+                  new Date(product.date).getMonth()}
+              </span>
+            ) : (
+              product.date
+            )}
+          </p>
           <Link
             to={`/product/${product._id}`}
             id="view_btn"

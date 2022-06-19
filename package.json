@@ -1,5 +1,5 @@
 {
-  "name": "Medicine Donation Portal",
+  "name": "medicine-donation-portal",
   "version": "1.0.0",
   "description": "full ecommerce site using mern",
   "main": "server.js",

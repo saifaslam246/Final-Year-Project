@@ -160,9 +160,18 @@ const ProductDetails = ({ match }) => {
               <hr />
 
               <p id="product_price">
-                {product.date
-                  ? `Expiary Date:${product.date.split("T00:00:00.000Z")}`
-                  : product.date}
+                {product.date ? (
+                  <span>
+                    Expiry Date:
+                    {new Date(product.date).getFullYear() +
+                      "-" +
+                      new Date(product.date).getDay() +
+                      "-" +
+                      new Date(product.date).getMonth()}
+                  </span>
+                ) : (
+                  product.date
+                )}
               </p>
               <div className="stockCounter d-inline">
                 <span className="btn btn-danger minus" onClick={decreaseQty}>
