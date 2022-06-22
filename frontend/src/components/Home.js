@@ -6,6 +6,7 @@ import MetaData from "./layout/MetaData";
 import Product from "./product/Product";
 import Loader from "./layout/Loader";
 import Aos from "aos";
+import { Link } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useAlert } from "react-alert";
@@ -77,7 +78,9 @@ const Home = ({ match, history }) => {
                 data-aos-duration="1500"
                 data-aos-offset="200"
               >
-                <img src={"/images/ai.png"} alt="home-img" />
+                <Link to="/donor/product">
+                  <img src={"/images/h.png"} alt="home-img" />
+                </Link>
               </div>
             </div>
 
