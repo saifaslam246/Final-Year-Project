@@ -80,11 +80,14 @@ exports.myDonation = catchAsyncErrors(async (req, res, next) => {
 exports.getproducts = catchAsyncErrors(async (req, res, next) => {
   const resperpage = 16;
   const productCount = await product.countDocuments();
-  const apifeature = new APIFeatures(product.find(), req.query)
+  const apifeature = new APIFeatures(
+    product.find().sort({ _id: -1 }),
+    req.query
+  )
     .search()
     .filter()
     .pagination(resperpage);
-
+  // .SORT({_ID:-1 })
   const allproducts = await apifeature.query;
   let filteredProductsCount = allproducts.length;
   res.status(200).json({
@@ -98,7 +101,7 @@ exports.getproducts = catchAsyncErrors(async (req, res, next) => {
 
 // /get all the product (admin) api/v1/admin/products
 exports.getAdminProducts = catchAsyncErrors(async (req, res, next) => {
-  const products = await product.find();
+  const products = await product.find().sort({ _id: -1 });
 
   res.status(200).json({
     success: true,

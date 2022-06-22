@@ -74,7 +74,7 @@ const ProductsList = ({ history }) => {
       rows: [],
     };
 
-    products.forEach((product) => {
+    products.reverse().forEach((product) => {
       data.rows.push({
         id: product._id,
         name: product.name,
