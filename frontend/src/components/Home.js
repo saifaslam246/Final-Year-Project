@@ -158,10 +158,7 @@ const Home = ({ match, history }) => {
           </Fragment>
         )}
       </Fragment>
-      <MessengerCustomerChat
-        pageId="109568921760430"
-        appId=" 530339108756375"
-      />
+      <MessengerCustomerChat pageId="109568921760430" appId="530339108756375" />
       ,
     </>
   );
