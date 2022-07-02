@@ -182,6 +182,7 @@ function Login({ history, location }) {
                   placeholder={"username"}
                   value={name}
                   onChange={onChangeSignUp}
+                  required
                 />
               </div>
               <div className={"input-field"}>
@@ -193,6 +194,7 @@ function Login({ history, location }) {
                   placeholder={"Email"}
                   value={emaill}
                   onChange={onChangeSignUp}
+                  required
                 />
               </div>
               <div className={"input-field"}>
@@ -231,6 +233,7 @@ function Login({ history, location }) {
                   placeholder={"Contact Number"}
                   value={phone}
                   onChange={onChangeSignUp}
+                  required
                 />
               </div>
               <div className="form-group">
@@ -253,6 +256,7 @@ function Login({ history, location }) {
                       id="customFile"
                       accept="iamges/*"
                       onChange={onChangeSignUp}
+                      required
                     />
                     <label className="custom-file-label" htmlFor="customFile">
                       Choose Avatar

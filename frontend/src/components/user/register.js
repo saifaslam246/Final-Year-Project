@@ -181,6 +181,7 @@ function Register({ history, location }) {
                   placeholder={"username"}
                   value={name}
                   onChange={onChangeSignUp}
+                  required
                 />
               </div>
               <div className={"input-field"}>
@@ -192,6 +193,7 @@ function Register({ history, location }) {
                   placeholder={"Email"}
                   value={emaill}
                   onChange={onChangeSignUp}
+                  required
                 />
               </div>
               <div className={"input-field"}>
@@ -231,6 +233,7 @@ function Register({ history, location }) {
                   placeholder={"Contact Number"}
                   value={phone}
                   onChange={onChangeSignUp}
+                  required
                 />
               </div>
 
