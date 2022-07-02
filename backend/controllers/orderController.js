@@ -45,7 +45,7 @@ exports.myOrders = catchAsyncErrors(async (req, res, next) => {
 
 // get all order by admin => api/v1/admin/orders
 exports.allOrders = catchAsyncErrors(async (req, res, next) => {
-  const orders = await Order.find();
+  const orders = await Order.find().sort({ _id: -1 });
   res.status(200).json({
     success: true,
     orders,

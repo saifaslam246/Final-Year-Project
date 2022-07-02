@@ -10,6 +10,8 @@ import registerimg from "./icons/register.jpg";
 import Contact from "../contact/Contact";
 import sign from "./icons/plus-sign.jpg";
 import Logo from "./icons/logo.png";
+import img3 from "./icons/2nd-img.jpeg";
+import img2 from "./icons/3rd-img.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import MessengerCustomerChat from "react-messenger-customer-chat";
@@ -235,9 +237,9 @@ function Home() {
           data-aos-offset="200"
         >
           <img
-            style={{ margin: "0px 100px" }}
+            style={{ margin: "0px 30px" }}
             className="img-margin"
-            src={registerimg}
+            src="https://tse2.mm.bing.net/th?id=OIP.QUPFVUQ5ioqy8O-FZVurhAHaEP&pid=Api&P=0&w=306&h=175"
             alt="First slide"
           />
           <h3 className="steps-h33" style={{ margin: "30px 90px" }}>
@@ -258,14 +260,14 @@ function Home() {
           <img
             style={{ margin: "0px 105px" }}
             className="w-10 h-10 img-margin"
-            src={registerimg}
+            src="https://tse2.mm.bing.net/th?id=OIP.UMrHSOehsLqy0YdkRyUFLgHaLG&pid=Api&P=0&w=104&h=157"
             alt="First slide"
           />
-          <h3 className="steps-h23" style={{ margin: "30px 50px" }}>
+          <h3 className="steps-h23" style={{ margin: "50px 50px" }}>
             Online Donations
           </h3>
           <br />
-          <h5>
+          <h5 style={{ margin: "-20px 0px" }}>
             We provide a full record of the donation, along with the impact it
             had on the community.
           </h5>
@@ -286,10 +288,7 @@ function Home() {
         <br />
         <Contact />
       </div>
-      <MessengerCustomerChat
-        pageId="109568921760430"
-        appId=" 530339108756375"
-      />
+      <MessengerCustomerChat pageId="109568921760430" appId="530339108756375" />
       ,
     </>
   );
